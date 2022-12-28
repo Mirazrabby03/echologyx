@@ -1,0 +1,32 @@
+.addToCart{
+    width: 100%;
+    height: 5vw;
+    padding: 0px;
+    margin: 10px 0px;
+    text-align: center;
+    background-color: black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-text{
+    color: white;
+}
+
+.card__heading a::after {
+   height: 75% !important;
+}
+
+.prev-primary-btn-bg-color{
+    background-color: #000 !important;
+}
+
+.card-wrapper {
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+.card-information {
+    bottom: 0px;
+    position: absolute;
+}

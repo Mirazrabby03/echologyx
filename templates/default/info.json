@@ -1,0 +1,6 @@
+{
+    "buildOutput": ["build","build.js"],
+    "cssStyle": "compressed",
+    "sourceEntry": ["index.js"],
+    "styleEntry": ["styles", "index.scss"]
+}

@@ -1,0 +1,434 @@
+body{
+    overflow: visible !important;
+}
+.img_area img{width: 100%}
+.single_cart_item .img_area {
+    width: 70px;
+}
+.mini_cart {
+    width: 375px;
+    position: absolute;
+    min-height: 200px;
+    z-index: 99;
+    right: -12px;
+    top: 60px;
+}
+.mini_cart_wp{
+    background: #fefaf0;
+    border: 1px solid #C4C4C4;
+}
+.mini_cart_wp:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 18.5px 27px 17.5px;
+    border-color: transparent transparent #C4C4C4 transparent;
+    position: absolute;
+    right: 16px;
+    top: -21px;
+    transform: rotate( 
+    15deg
+    );
+    z-index: -1;
+}
+.site-nav{
+    position: relative;
+}
+.top_part{
+    text-align: center;
+    padding: 20px 15px;
+    border-bottom: 1px solid #F3F3F3;
+    position: relative;
+}
+.top_part:before{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 17.5px 27px 17.5px;
+    border-color: transparent transparent #fefaf0 transparent;
+    position: absolute;
+    right: 16px;
+    top: -21px;
+    transform: rotate(
+        15deg
+    );
+}
+
+.top_part:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 17.5px 27px 17.5px;
+    border-color: transparent transparent #fefaf0 transparent;
+    position: absolute;
+    right: 16px;
+    top: -21px;
+    transform: rotate(
+        15deg
+    );
+}
+
+.top_part .bag_txt{
+    font-family: FuturaND;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #000000;
+    margin-bottom: 8px;
+    text-transform: lowercase;
+}
+
+.top_part h2{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: "Sweetsans","Avenir Next";
+    margin-bottom: 6px;
+}
+.top_part p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    text-transform: inherit;
+    color: #000000;
+    margin-bottom: 0;
+}
+.mini_cart .info_area  a{
+    
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    color: #000000;
+    display: block;
+    // vertical-align: middle;
+    margin-right: 11px;
+    
+}
+.mini_cart .info_area span{
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    
+    display: block;
+}
+.mini_cart .info_area h2 {
+    margin-bottom: 0;
+}
+
+.single_cart_item {
+    display: flex;
+    padding: 15px 0;
+}
+
+.item_list .single_cart_item:last-child{
+    border-bottom: 0;
+}
+
+.mini_cart .item_list {
+    padding: 0 15px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.single_cart_item .info_area {
+    padding-left: 15px;
+    flex: 1;
+    padding-right: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+// .single_cart_item .info_area .name_wp{
+
+// }
+
+// .mini_cart .info_area a{
+
+// }
+
+.mini_cart .info_area a span {
+    display: inline !important;
+    font-size: inherit;
+    line-height: 16px;
+    opacity: 1 !important;
+    position: static !important;
+}
+
+.mini_cart .info_area span.variant {
+    display: block !important;
+    margin-top: 7px;
+    font-size: 10px;
+    opacity: .7;
+}
+
+.mini_cart .info_area p.price {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #000000;
+    position: absolute;
+    right: 21px;
+    bottom: 6px;
+    margin-bottom: 0;
+}
+.mini_cart .info_area .cross{
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    top: -8px;
+    width: 17px;
+}
+.mini_cart .info_area .cross img {
+    width: 12px;
+}
+
+.single_cart_item .info_area .edit{
+    background: #000000;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 41px;
+    height: 18px;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 20px;
+    
+}
+.single_cart_item .info_area .edit.mac{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add_bag_wp {
+    padding: 0 15px;
+}
+
+.add_bag {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 0;
+    margin-bottom: 10px;
+    background: #000;
+    border: 2px solid #000000;
+    cursor: pointer;
+    border-radius: 23px;
+    
+}
+.close_mini {
+    width: 16px;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    top: 23px;
+}
+span.c_i_qty {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative !important;
+    /* top: -1px; */
+    opacity: 1 !important;
+    left: auto !important;
+}
+
+#page.hideSideCart .side-cart, #page.hideSideCart .side__cart--overlay{
+    position: fixed;
+    z-index: -99999;
+    opacity: 0;
+}
+
+
+
+.hideEl{
+    display: none !important;
+}
+
+.counter_area {
+    display: flex;
+    align-items: center;
+    width: 65px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 7px;
+    margin-top: 20px;
+}
+
+.counter_area span {
+    min-width: 20px;
+    text-align: center;
+    height: 17px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.counter_area input{
+    flex: 1;
+    border: 0;
+    height: 17px;
+    margin-top: 0px;
+    text-align: center;
+    width: 25px;
+    font-size: 11px;
+    background: #fefaf0;
+}
+
+.mac.counter_area input{
+    position: relative;
+    top: -6px;
+}
+
+.counter_area input:focus{
+    outline: none;
+}
+
+.mini_cart .info_area span.minus {
+    font-size: 26px;
+    position: relative !important;
+    top: -3px;
+    left: auto !important;
+    opacity: 1 !important;
+}
+
+.mini_cart .info_area span.pluse {
+    font-size: 17px;
+    position: static !important;
+    opacity: 1 !important;
+}
+
+.mini_cart .info_area .mac span.pluse{
+    position: relative !important;
+    left: auto !important;
+    top: -1px;
+}
+
+.loader_1 {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top: 2px solid #00ff00;
+    width: 14px;
+    height: 14px;
+    -webkit-animation: spin 2s linear infinite;
+    display: inline-block;
+    animation: spin .5s linear infinite;
+    position: relative;
+    top: 2px;
+}
+.single_cart_item.freeItem .info_area {
+    justify-content: flex-start;
+    padding-top: 15px;
+}
+
+
+html.no__overflow {
+    overflow: auto !important;
+}
+
+html.no__overflow.overflow {
+    overflow: hidden !important;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+@media only screen and (min-width: 601px) {
+    .item_list .single_cart_item:last-child{
+        border-bottom: 0;
+    }
+   
+}
+
+@media only screen and (min-width: 1424px) {
+   
+}
+@media only screen and (max-width: 767px) {
+
+    .counter_area input{
+        position: relative;
+        top: -1px;
+    }
+    .counter_area.mac input {
+        height: 21px;
+        padding: 0;
+        font-size: 11px !important;
+    }
+
+    .counter_area.mac span {
+        height: 21px;
+    }
+
+    .mini_cart .item_list{
+        max-height: 300px;
+    }
+    .mini_cart{
+        top: 56px;
+        width: 345px;
+        right: -11px;
+        width: 280px;
+    }
+    .top_part:before{
+        right: 7px;
+        top: -15px;
+    }
+    .mini_cart .item_list {
+        padding: 0 10px;
+    }
+    .add_bag_wp{
+        padding: 0 10px;
+    }
+    .add_bag{
+        margin-bottom: 10px;
+    }
+    .site-nav{
+        position: static;
+    }
+    .top_part{
+        padding: 30px 15px;
+    }
+    .counter_area{
+        margin-top: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    .counter_area.mac input {
+        font-size: 7px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .counter_area.mac input {
+        font-size: 6px;
+    }
+}

@@ -1,0 +1,50 @@
+.cart-text{
+    border-top: 1px solid rgba(0,0,0,0.1);
+        margin: 0px 25px 20px;
+        padding-top: 20px;
+}
+.progress_bar {
+    height: 17px;
+    position: relative;
+    background: #E9E9E9;
+    overflow: hidden;
+}
+.cart-text h2{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 30px;
+}
+.cart-text p{
+    font-family: 'Futura' !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+    color: #000000;
+}
+.freeShipping_await span{
+    font-weight: bold !important;
+}
+
+.progress_bar .progress {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background: #000000;
+    transition: all .3s;
+}
+
+@keyframes percantage_bar {
+    from {opacity: .2;}
+    to {opacity: 1;}
+}
