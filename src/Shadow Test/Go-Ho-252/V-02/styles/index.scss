@@ -1,0 +1,595 @@
+#heroBannerContent {
+    display: flex;
+}
+
+#heroBannerBackground {
+    display: none;
+}
+
+
+#heroBannerContent {
+    display: flex;
+
+    #heroBannerCopy {
+        width: 53%;
+        padding-left: 90px;
+        background-color: #fff0 !important;
+
+        .col-xs-11 {
+            display: none;
+        }
+
+    }
+}
+
+.hero-container.half__width__timer {
+    width: 100%;
+
+    .hero-title h1 {
+        color: #3A3A3A;
+        font-size: 44px !important;
+    }
+}
+
+.date-countdown-container {
+    display: flex;
+    background-image: linear-gradient(to right, #00769E, #008FBE);
+    color: white;
+    width: 100%;
+    // height: 120px;
+    border-radius: 10px;
+    padding: 25px 20px 25px 15px;
+}
+
+.limited-offer-text {
+    display: flex;
+    align-content: center;
+    width: 30%;
+    align-items: center;
+    height: 100%;
+}
+
+.limited-offer-text p {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.offer-note {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#heroBannerCta {
+    padding-left: 0px;
+}
+
+.date-countdown {
+    width: 70%;
+}
+
+.divider {
+    font-size: 32px;
+    padding-inline: 2px;
+}
+
+p.sw__hero__countdown__date_label {
+    margin: 0;
+}
+
+.date-countdown-container {
+    align-items: center;
+}
+
+
+
+#heroBannerContent #heroBannerHouse {
+    float: right;
+    width: 45%;
+
+    .heroMask {
+        width: 140%;
+        height: auto;
+        left: -2vw;
+    }
+
+    img.heroMask {
+        max-width: unset;
+    }
+}
+
+
+
+.sw__hero {
+    position: relative;
+    top: 12px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    // height: 100%;
+    width: 100%;
+    display: flex;
+    transition: .6s all ease-in-out;
+}
+
+
+
+.sw__hero__content {
+    color: #fff;
+    animation-name: showHeroText;
+    position: relative;
+    width: 100%;
+}
+
+.sw__hero__title,
+.sw__hero__date {
+    -webkit-animation-name: showHeroText;
+    animation-name: showHeroText;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.wrap {
+    text-align: center;
+    position: relative;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sw__hero__countdown__wrapper {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: showHeroText 0s 1.2s forwards;
+    visibility: hidden;
+}
+
+
+.sw__hero__countdown__date_container {
+    background-color: #fff;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.sw__hero__countdown__dates {
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+    color: black;
+    display: inline-block;
+    font-family: 'museo-sans-rounded-700', "Trebuchet MS", Arial, sans-serif;
+}
+
+
+.sw__hero__countdown__date_label {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: left;
+    color: #fff;
+}
+
+.wrap {
+    width: 50%;
+}
+
+
+.sw__hero__countdown {
+    display: flex;
+    // justify-content: space-evenly;
+}
+
+.dot_diveider {
+    font-size: 45px;
+    height: 50px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.container .content {
+
+    .col-md-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #heroBanner {
+        background-color: #fff;
+        height: 550px;
+    }
+}
+
+
+
+.gray-svg {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: auto;
+    left: 0;
+    z-index: 999;
+}
+
+div#mainContainer {
+    margin-top: -8px !important;
+}
+
+
+//2nd page
+.main-container.full__width__timer {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-container.full__width__timer {
+    display: flex;
+    background: #444444;
+    width: 90%;
+    border-radius: 10px;
+    height: 140px;
+    padding: 10px 20px 10px 20px;
+
+    .hero-title {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h1 {
+            color: #EDE4C3;
+            font-size: 28px;
+        }
+    }
+
+    .date-countdown-container {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        background-image: unset;
+        padding: 0px;
+    }
+
+    .limited-offer-text {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        p {
+            font-weight: bold;
+            color: #EDE4C3;
+        }
+    }
+
+    .date-countdown {
+        width: 100%;
+    }
+
+    .button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 15%;
+    }
+
+    .offer-btn {
+        background-color: #E7342C;
+        border-radius: 50px;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        font-family: museo-sans-rounded-700;
+    }
+
+
+}
+
+.offer-note p {
+    font-weight: 700 !important;
+}
+
+//3rd page
+
+.hero-container.quarter__width__timer {
+    .hero-title {
+        display: none;
+    }
+
+    .sw__hero__content {
+        padding: 10px 10px 0px 5px;
+    }
+
+    .sw__hero__countdown__date_container.links {
+        height: 90%;
+    }
+
+    .date-countdown-container {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .limited-offer-text {
+        justify-content: center;
+
+        p {
+            font-weight: 700 !important;
+        }
+    }
+}
+
+.hero-banner:after {
+    z-index: -1 !important;
+}
+
+// /*
+// //  Mobile
+// //  --------------------------------------------- */
+// @media screen and (max-width: 1200px) {
+
+
+//     #heroBannerContent #heroBannerCopy {
+//         width: 65%;
+
+//         h1 {
+//             font-size: 40px !important;
+//         }
+
+//         .date-countdown-container {
+//             padding: 10px 15px 10px 15px;
+
+//         }
+//     }
+
+// }
+
+
+@media screen and (max-width: 991px) {
+
+    #heroBannerContent #heroBannerCopy {
+        width: 80%;
+
+        .limited-offer-text {
+            height: 22%;
+            width: 100%;
+            justify-content: flex-start;
+            margin-inline: 10px;
+        }
+
+        .date-countdown {
+            width: 100%;
+            height: 100%;
+        }
+
+        .date-countdown-container {
+            flex-direction: column;
+            width: 85%;
+            height: 140px;
+        }
+
+        .sw__hero {
+            margin-inline: 0px;
+        }
+
+        .divider {
+            padding-inline: 5px;
+        }
+
+        .offer-note {
+            width: 85%;
+        }
+    }
+
+    #heroBannerContent #heroBannerHouse {
+        width: 20% !important;
+
+        .heroMask {
+            width: 188%;
+            left: -70%;
+            top: 10%;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+
+    .content .measure-me-parent {
+        overflow: hidden;
+    }
+
+    //2nd page
+    .hero-container.full__width__timer {
+        .hero-title {
+            width: 55%;
+        }
+
+        .date-countdown-container {
+            width: 38%;
+        }
+
+        .button {
+            width: 25%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    #heroBannerContent #heroBannerCopy {
+        padding-left: 40px;
+    }
+
+    #heroBannerCopy>div:first-of-type {
+        background-color: #fff0 !important;
+    }
+
+    #heroBannerContent #heroBannerHouse {
+        width: 20%;
+        position: relative;
+        right: 2%;
+        height: 300px !important;
+        top: unset !important;
+
+        .heroMask {
+            width: 200%;
+
+        }
+
+        img.heroMask {
+            top: 20% !important;
+        }
+    }
+
+    //2nd page
+    .hero-container.full__width__timer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        .hero-title {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .date-countdown-container {
+            width: 80%;
+
+            .limited-offer-text {
+                align-items: center;
+            }
+        }
+
+        .sw__hero__countdown__date_label {
+            text-align: center;
+        }
+
+        .button {
+            width: 100%;
+            justify-content: center;
+            margin: 15px 0;
+        }
+    }
+
+    //3rd page
+    .hero-banner__content {
+        max-width: 100% !important;
+    }
+
+    .hero-container.quarter__width__timer {
+        .date-countdown-container {
+            flex-direction: column;
+            height: 140px;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .limited-offer-text {
+            width: 100%;
+        }
+
+        .date-countdown {
+            width: 100%;
+        }
+
+        .sw__hero__countdown__date_label {
+            text-align: center;
+        }
+
+    }
+
+    .hero-banner__content .offer-note {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+@media screen and(max-width:560px) {
+    #heroBannerContent #heroBannerCopy {
+
+        .sw__hero {
+            width: 100%;
+        }
+
+        .sw__hero__countdown__dates {
+            font-size: 35px;
+        }
+
+        .offer-note p {
+            font-size: 13px;
+        }
+
+        .dot_diveider {
+            height: 40px;
+        }
+    }
+
+    #heroBannerContent #heroBannerHouse img.heroMask {
+        top: 40% !important;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #heroBannerContent #heroBannerHouse img.heroMask {
+        top: 45% !important;
+    }
+
+    #heroBannerContent #heroBannerCopy {
+        padding-left: 30px;
+
+        .btn-solid {
+            padding: 0.5em 0.5em !important;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #heroBannerCopy .hero-container.half__width__timer {
+        .hero-title h1 {
+            font-size: 35px !important;
+        }
+
+    }
+
+    #heroBannerContent #heroBannerHouse img.heroMask {
+        top: 58% !important;
+    }
+}
+
+@-webkit-keyframes showHeroText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showHeroText {
+    to {
+        visibility: visible;
+    }
+}

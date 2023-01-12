@@ -1,0 +1,124 @@
+// #heroBannerBackground{
+//     display: none;
+// }
+// .content #heroBanner{
+//     clip-path: ellipse(85% 88% at 50% 11%);
+//     background-color: #fff;
+// }
+
+// #heroBannerHouse{
+//     position: absolute;
+//     display: flex;
+//     justify-content: flex-end;
+//     width: 100%;
+//     height: 50%;
+//     top: 0;
+//     right: -9%;
+// }
+#heroBanner.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#heroBannerContent{
+    display: flex;
+}
+
+#heroBannerContent #heroBannerHouse{
+    float: right;
+    position: relative;
+    left: 15vmax;
+}
+
+img.heroMask{
+    max-width: 85%;
+}
+
+.hero-title{
+    width: 60%;
+    padding-left: 50px;
+}
+.hero-title h1{
+    color: #333;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    padding: 30px 0;
+    margin: 0;
+}
+
+// * {
+
+//     font-family:"Ruluko";
+
+// }
+// main{
+//     background: #447878 !important;
+//     text-align: center;
+//     padding: 150px 20px !important;
+// }
+// h3 {
+//     margin: 20px;
+//     color:white;
+// }
+
+// #countDiv {
+//     color:white;
+//     display:inline-block;
+//     font-size:30px;
+// }
+
+// #countDiv > div {
+//     padding:10px;
+//     background-color:#38556A;
+//     border-radius: 30% 3%;
+//     display:inline-block;
+// }
+
+// #countDiv div > span {
+//     padding:15px;
+//     background-color:#4C6983;
+//     border-radius: 30% 3%;
+//     display: inline-block;
+//     transition:all 2s;
+// }
+
+// #countDiv div > span:hover {
+//     transform:scale(2)
+// }
+
+// .smallText{
+//     font-weight:900;
+// 	padding-top: 5px;
+// 	font-size: 16px;
+// }
+.date-countdown-container{
+    display: flex;
+    background-image: linear-gradient(to right, #00769E, #008FBE);
+    color: white;
+}
+.date-count-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .date-count-container h2{
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    -webkit-box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+  
+  .date-count-container p{
+    background-color: #ddd;
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    -webkit-box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
