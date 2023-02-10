@@ -18,11 +18,18 @@ let echoVariation = {
 
             "";
     },
-    mainJs: function () { },
+    mainJs: function () {
+
+        let personNotification = document.createElement('div')
+        personNotification.classList.add('notofication_wrapper')
+
+
+
+    },
 };
 waitForElem("body", (elements) => {
     if (elements) {
-        console.log(`Test Name - Variant Name`);
+        console.log(`OnTrack-PP #4 Urgency on cart - V-01`);
         echoVariation.init();
     }
 });
