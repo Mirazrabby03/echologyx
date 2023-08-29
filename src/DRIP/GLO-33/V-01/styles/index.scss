@@ -1,0 +1,50 @@
+.discount-badge::before {
+	content: 'Bis zu 15% sparen';
+	display: block;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	z-index: 99;
+	text-align: center;
+	line-height: 100%;
+	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none"><path d="M3.5 0.5C2.5375 0.5 1.68 0.972141 1.0325 1.71114C0.4025 2.45015 0 3.45601 0 4.60557C0 5.7346 0.4025 6.74047 1.0325 7.5L7 14.5L12.9675 7.5C13.5975 6.761 14 5.75513 14 4.60557C14 3.47654 13.5975 2.47067 12.9675 1.71114C12.3375 0.972141 11.48 0.5 10.5 0.5C9.5375 0.5 8.68 0.972141 8.0325 1.71114C7.4025 2.45015 7 3.45601 7 4.60557C7 3.47654 6.5975 2.47067 5.9675 1.71114C5.3375 0.972141 4.48 0.5 3.5 0.5Z" fill="%23AD976E"/></svg>');
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	align-items: center;
+	width: 180px;
+	height: 31px;
+	top: 12px;
+	left: 12px;
+	font-size: 12px;
+	color: #ad976e;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-style: normal;
+	line-height: 19.2px;
+	letter-spacing: 1.3px;
+	background-position-x: 12px;
+	background-size: 14px;
+	padding-right: 12px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 31px;
+}
+
+@media screen and (max-width: 767px) {
+	.discount-badge::before {
+		width: 140px;
+		height: 25px;
+		left: 10px;
+		font-size: 8px;
+		line-height: 12.8px;
+		background-position-x: 12px;
+		background-size: 12px;
+		padding-right: 12px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		padding-left: 28px;
+		top: 10px;
+	}
+}

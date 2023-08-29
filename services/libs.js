@@ -938,7 +938,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! C:\\Users\\matth\\WebstormProjects\\echo-transpiler\\transpiler\\libs\\index.js */\"./transpiler/libs/index.js\");\n\n\n//# sourceURL=webpack://modulename/multi_./transpiler/libs/index.js?");
+eval("module.exports = __webpack_require__(/*! /home/smazad/Workspace/echologyx/echo-transpiler/transpiler/libs/index.js */\"./transpiler/libs/index.js\");\n\n\n//# sourceURL=webpack://modulename/multi_./transpiler/libs/index.js?");
 
 /***/ }),
 

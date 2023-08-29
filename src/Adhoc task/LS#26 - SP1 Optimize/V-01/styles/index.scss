@@ -1,0 +1,73 @@
+.variation-1 #hero video{
+    max-width: 50%;
+    margin-left: 18px;
+}
+
+.variation-1 #hero .btn{
+    display: flex;
+    justify-content: center;
+}
+
+.variation-1 #hero .row .col-md-offset-1{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.variation-1 .hero__video__text{
+    display: flex;
+    align-items: center;
+}
+
+.variation-1 .hero__video__text span{
+    color: #000 !important;
+    text-transform: initial !important;
+}
+.variation-1 #howto{
+    margin-bottom: 5px;
+}
+.variation-1 #howto > div > div > div:nth-child(1){
+    max-width: 100%;
+}
+
+.variation-1 #howto .container .col-sm-3{
+    max-width: 50% !important;
+}
+
+.variation-1 #easy .container-fluid .row .first-xs{
+    display: none;
+}
+
+.variation-1 #icons{
+    display: none;
+}
+
+.variation-1 .icon__image{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    object-fit: contain;
+}
+
+.variation-1 .icon__wrapper{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5)
+}
+
+.variation-1 .icons__container{
+    padding: 5px 24px 26px 24px;
+}
+
+.variation-1 .icons__container h3{
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+    font-weight: 400 !important;
+}
+
+.variation-1 .icon__title{
+    margin-left: 19px !important;
+    margin-bottom: 0 !important;
+    text-transform: uppercase;
+}

@@ -1,0 +1,269 @@
+.cross-sell__item-variants.cross-sell__item__variants--shop-the-look {
+	display: none;
+	opacity: 1;
+	visibility: visible;
+}
+.ab--product-infos__label {
+	z-index: 2;
+	position: absolute;
+	bottom: 58px;
+	left: var(--absolute-position);
+	-webkit-margin-after: 0;
+	margin-block-end: 0;
+	background-color: #fff;
+	font-size: 12px;
+	display: inline-flex;
+	height: 32px;
+	padding: 0px 16px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.16);
+	border-radius: 900px;
+	cursor: pointer;
+}
+
+.ab--overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	z-index: 999;
+	display: none;
+}
+
+.active {
+	display: block !important;
+}
+.ab--popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 818px;
+	min-height: 573px;
+	z-index: 999;
+	background-color: #fff;
+}
+
+.ab--popup__content {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 25px;
+	padding-right: 25px;
+}
+
+.ab--popup__content_body {
+	padding-top: 16px;
+	padding-left: 48px;
+	padding-bottom: 48px;
+	padding-right: 48px;
+
+	.shop-the-look {
+		margin: unset;
+	}
+	.shop-the-look__title {
+		font-size: 28px;
+		line-height: 24px;
+	}
+	.cross-sell__item-wrapper {
+		display: flex;
+		gap: 16px;
+
+		form {
+			position: absolute;
+			bottom: 40px;
+			width: 100%;
+		}
+	}
+	.cross-sell__item-variants.cross-sell__item__variants--shop-the-look {
+		bottom: 0;
+	}
+}
+
+.ab--popup__content_header_close_icon {
+	cursor: pointer;
+}
+
+.ab--product-color {
+	font-size: 14px;
+	line-height: 26px;
+	color: #929294;
+	margin-bottom: 15px;
+	margin-top: 0px;
+}
+.cross-sell__item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start !important;
+}
+
+.cross-sell__item-image {
+	min-width: 230px;
+	min-height: 289px;
+}
+
+.ab--product-info-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.ab--selected-variant label {
+	border: 1px solid red;
+	border-radius: 50%;
+}
+
+.cross-sell__item-info {
+	width: 100%;
+}
+
+.cross-sell__item-button.medium {
+	width: 100%;
+	display: flex;
+	height: 32px;
+	padding: 0px 8px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	flex-shrink: 0;
+	background-color: #000;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.cross-sell__item-button.medium::after {
+	content: unset;
+}
+
+.ab--product-info-button-icon {
+	line-height: 0px;
+}
+
+.cross-sell__item-variants.cross-sell__item__variants--shop-the-look {
+	position: relative;
+	bottom: 256px;
+	position: relative;
+	top: unset;
+}
+.cross-sell__item-variants-container {
+	height: 100%;
+	box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+	display: flex;
+	width: 100%;
+}
+
+.cross-sell__item-variants-wrapper {
+	height: 100%;
+	width: 100%;
+}
+.cross-sell__item-close.hidden-pocket {
+	display: none;
+}
+.cross-sell__item-variants-list.text.list--unstyled {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: flex-start;
+	height: 100%;
+}
+
+.cross-sell__item-variants-list li.cross-sell__item-variant-list-item:last-child {
+	border-bottom: none;
+}
+
+.cross-sell__item-variant-list-item:hover {
+	box-shadow: unset;
+}
+.cross-sell__item-variant-list-item {
+	width: 100%;
+	margin: unset;
+	border-radius: unset;
+	border-bottom: 1px solid #e6e6e8;
+	display: flex;
+	cursor: pointer;
+
+	label {
+		padding: unset;
+		width: 28px;
+		height: 28px;
+	}
+}
+
+.shop-the-look__products {
+	display: flex;
+}
+
+cross-sell__item-variant-list-item:last-child {
+	border-bottom: unset;
+}
+
+@media screen and (max-width: 767px) {
+	.cross-sell__item-variants {
+		width: 100% !important;
+		box-shadow: unset !important;
+		bottom: 236px !important;
+		transform: unset !important;
+	}
+	.cross-sell__item-variants.cross-sell__item__variants--mini-cart {
+		display: none;
+
+		.cross-sell__item-variants-container {
+			box-shadow: unset;
+		}
+	}
+	.cross-sell__item-variants.cross-sell__item__variants--shop-the-look {
+		display: none;
+		// transform: unset !important;
+	}
+	.active {
+		display: block !important;
+		box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1) !important;
+	}
+
+	.cross-sell__item-container[data-variant-shown='true'] .cross-sell__item-wrapper .cross-sell__item-variants {
+		transform: unset !important;
+	}
+
+	.shop-the-look__title {
+		font-size: 22px;
+	}
+	.cross-sell__item-image {
+		min-width: unset;
+		min-height: unset;
+		width: 100%;
+		height: 205px;
+	}
+	.cross-sell__item-wrapper {
+		max-width: 163px;
+	}
+	.ab--product-info-wrapper {
+		flex-direction: column;
+	}
+	.cross-sell__item {
+		gap: unset;
+	}
+	.cross-sell__item-title {
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.cross-sell__item-price {
+		font-size: 14px;
+	}
+	.cross-sell__item-variants-container {
+		padding: 0 10px 0;
+	}
+	.ab--product-infos__label {
+		gap: 6px;
+	}
+	.cross-sell__item-variant-list-item {
+		padding-top: 8px;
+	}
+	.cross-sell__item-variants-title {
+		display: none;
+	}
+}

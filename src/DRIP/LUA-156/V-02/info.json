@@ -1,0 +1,16 @@
+{
+    "buildOutput": [
+        "build",
+        "build.js"
+    ],
+    "cssStyle": "compressed",
+    "sourceEntry": [
+        "index.js"
+    ],
+    "styleEntry": [
+        "styles",
+        "index.scss"
+    ],
+    "name": "V-02",
+    "lastUpdated": 1693225012943
+}

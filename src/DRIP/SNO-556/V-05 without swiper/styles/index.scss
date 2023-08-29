@@ -1,0 +1,606 @@
+/* @media (max-width: 890px){
+        [data-id="sneakersocken-weiss"]{
+                order:0;
+        }
+         [data-id="fusslinge-weiss"]{
+                order:1;
+        }
+         [data-id="tennissocken-schwarz-weiss"]{
+                order:2;
+        }
+         [data-id="business-socken-leichte-lange-socken-mix"]{
+                order:3;
+        }
+         [data-id="laufsocken-schwarz-weiss"]{
+                order:4;
+        }
+     .ab--recomendation-panel__product.swiper-slide:nth-of-type(4){
+         display: none;
+     }    
+} */
+
+.Icon--cart {
+	fill: none;
+
+	stroke: #171717;
+
+	stroke-width: 1px;
+
+	stroke-miterlimit: 100;
+
+	width: 24px;
+}
+
+.ab--recomendation-panel.swiper {
+	display: flex;
+
+	flex-direction: column;
+}
+
+.ab--recomendation-panel {
+	position: absolute;
+
+	height: 100vh;
+
+	width: 222px;
+
+	background: rgba(255, 255, 255, 1);
+
+	left: 0;
+
+	transform: translateX(-100%);
+
+	border-right: 1px solid rgba(221, 221, 221, 1);
+
+	overflow-y: auto;
+
+	padding: 0 14px 30px 14px;
+
+	-ms-overflow-style: none;
+
+	scrollbar-width: none;
+
+	transition: opacity 0.3s ease-in-out;
+
+	opacity: 1;
+}
+
+.ab--recomendation-panel__title__wrapper {
+	background: white;
+
+	padding: 30px 0 15px 0;
+}
+
+.ab--recomendation-panel::-webkit-scrollbar {
+	display: none;
+}
+
+.ab--recomendation-panel__title {
+	color: #1c1c1c;
+
+	font-size: 16px;
+
+	font-weight: 600;
+
+	margin-bottom: 10px;
+}
+
+.ab--recomendation-panel__wrapper {
+	position: relative;
+
+	z-index: -1;
+}
+
+.ab--recomendation-panel__product__image {
+	margin-top: 15px;
+
+	width: 194px;
+
+	height: 194px;
+}
+
+.ab--recomendation-panel__product__name {
+	margin-top: 17px;
+
+	color: #1c1c1c;
+
+	font-size: 16px;
+
+	font-weight: 600;
+
+	letter-spacing: 0.32px;
+}
+
+.ab--recomendation-panel__product__price {
+	color: #646464;
+
+	font-size: 16px;
+
+	font-weight: 400;
+
+	margin-top: 8px;
+}
+
+.ab--recomendation-panel__product__wrapper {
+	display: flex;
+
+	gap: 4px;
+
+	margin-top: 15px;
+}
+
+.ab--recomendation-panel__product__size {
+	width: 95px;
+
+	height: 32px;
+}
+
+.ab--recomendation-panel__product__image__wrapper {
+	z-index: -1;
+}
+
+#size {
+	height: 100%;
+
+	font-size: 11px;
+
+	padding-left: 10px;
+
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ab--recomendation-panel_addToCart {
+	width: 95px;
+
+	height: 32px;
+
+	background-color: rgba(249, 202, 79, 1);
+}
+
+.custom-select {
+	position: relative;
+
+	display: inline-block;
+
+	background: #fff;
+
+	width: 95px;
+
+	height: 32px;
+
+	font-size: 11px;
+
+	z-index: 11;
+
+	border: 1px solid #d9d9d9;
+}
+
+.select-items {
+	margin-top: 1px;
+}
+
+.select-button {
+	padding: 5px 20px;
+
+	width: 100%;
+
+	height: 100%;
+
+	cursor: pointer;
+
+	text-align: left;
+
+	overflow: hidden;
+}
+
+.dropdown-list {
+	position: absolute;
+
+	list-style: none;
+
+	padding: 0;
+
+	margin: 0;
+
+	background-color: #fff;
+
+	max-height: 150px;
+
+	overflow-y: auto;
+
+	text-align: center;
+
+	transition: all 0.3s ease-out;
+
+	height: auto;
+
+	overflow: hidden;
+
+	max-height: auto;
+
+	border-bottom: none;
+
+	max-width: 130px;
+
+	min-width: 130px;
+
+	transform: scale(1);
+
+	left: -1px;
+}
+
+.dropdown-list li {
+	padding-left: 11px;
+
+	padding-top: 7px;
+
+	padding-bottom: 7px;
+
+	cursor: pointer;
+
+	font-size: 14px;
+
+	text-align: left;
+
+	position: relative;
+
+	max-height: 32px;
+
+	min-height: 32px;
+}
+
+.dropdown-list li.unavailable {
+	pointer-events: none;
+
+	opacity: 0.5;
+}
+
+.dropdown-list li:not(:last-child)::before {
+	content: '';
+
+	position: absolute;
+
+	left: 5px;
+
+	right: 5px;
+
+	bottom: 0;
+
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.dropdown-list li:hover {
+	background-color: #000;
+
+	color: white;
+
+	transition: all 0.3s ease-out;
+}
+
+.dropdown-list li:hover::before {
+	border-bottom: unset !important;
+}
+
+.open {
+	max-height: 30px;
+
+	border: unset;
+
+	transform: scale(0.8, 0) translateY(-29px);
+
+	transform-origin: top left;
+
+	z-index: -9;
+}
+
+.accordion-icon {
+	position: absolute;
+
+	top: 50%;
+
+	right: 18px;
+
+	transform: translateY(-50%);
+
+	cursor: pointer;
+
+	z-index: -1;
+}
+
+.accordion-icon-mobile {
+	display: none;
+}
+
+.ab--recomendation-panel__product__addToCart {
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+	width: 100%;
+
+	height: 100%;
+
+	border: none;
+
+	background: none;
+
+	padding: 0;
+
+	cursor: pointer;
+}
+
+.ab--recomendation-panel__product__addToCart svg {
+	pointer-events: none;
+}
+
+.hide-item {
+	display: none !important;
+}
+
+@media (min-width: 768px) {
+	.hide-panel {
+		display: none !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.hide-panel {
+		opacity: 0;
+
+		pointer-events: none;
+
+		cursor: default;
+	}
+}
+
+.hide-opacity {
+	opacity: 0;
+}
+
+.error {
+	border: 2px solid #e22120;
+}
+
+@media (max-width: 767px) {
+	.ab--loader__wrapper {
+		// background-color: #fff;
+		height: 195px;
+		width: 100vw;
+	}
+
+	.loader-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	.loader {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 80px;
+		height: 40px;
+	}
+
+	.dot {
+		width: 10px;
+		height: 10px;
+		margin: 0 5px;
+		background-color: #f3f724;
+		border-radius: 50%;
+		animation: bounce 1.5s infinite ease-in-out;
+	}
+
+	.dot:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+
+	.dot:nth-child(3) {
+		animation-delay: 0.4s;
+	}
+
+	@keyframes bounce {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-20px);
+		}
+	}
+
+	.Drawer__Main {
+		padding-bottom: 160px;
+	}
+
+	.Drawer__Footer {
+		height: 195px;
+	}
+
+	.ab--recomendation-panel {
+		// display: var(--mobile-display, none) !important;
+
+		bottom: 195px !important;
+
+		transition: none;
+
+		width: 100%;
+
+		transform: unset;
+
+		height: unset;
+
+		padding: 8px 24px !important;
+
+		position: fixed;
+
+		background: white;
+
+		overflow: visible;
+
+		z-index: 9999999;
+
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.ab--recomendation-panel__wrapper {
+		display: flex;
+
+		padding-top: 12px;
+
+		position: initial;
+
+		z-index: unset;
+	}
+
+	.ab--recomendation-panel__title {
+		font-size: 12px;
+
+		margin-bottom: unset;
+	}
+
+	.ab--recomendation-panel__product__container {
+		display: flex;
+
+		width: 294px;
+
+		height: auto;
+	}
+
+	.ab--recomendation-panel__product__image {
+		max-width: 99px;
+
+		max-height: 99px;
+
+		margin-top: unset;
+	}
+
+	.ab--recomendation-panel__product__name {
+		font-size: 12px;
+
+		margin-top: unset;
+
+		min-height: 38px;
+	}
+
+	.ab--recomendation-panel__product__price {
+		font-size: 12px;
+
+		margin-top: 4px !important;
+
+		margin-bottom: 4px !important;
+	}
+
+	.ab--recomendation-panel__product__container {
+		border: 1px solid rgba(0, 0, 0, 0.1);
+
+		padding: 8px 7px;
+	}
+
+	.ab--recomendation-panel__product__details {
+		margin-left: 5px;
+	}
+
+	.ab--recomendation-panel__product {
+		margin-right: 8px;
+
+		flex: 1 !important;
+	}
+
+	#size {
+		border-radius: 5px;
+
+		width: 100%;
+	}
+
+	.custom-select {
+		border: unset;
+
+		width: 71px;
+
+		height: 33px !important;
+	}
+
+	.custom-select select {
+		padding-right: unset;
+	}
+
+	.accordion-icon {
+		right: 10px;
+	}
+
+	.ab--recomendation-panel__product__wrapper {
+		gap: unset;
+
+		margin-top: unset;
+	}
+
+	.ab--recomendation-panel_addToCart {
+		width: 71px;
+
+		margin-left: 8px;
+	}
+
+	.ab--recomendation-panel__title__wrapper {
+		display: flex;
+
+		justify-content: space-between;
+
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+		padding-top: 15px;
+
+		padding-bottom: unset;
+
+		align-items: center;
+	}
+
+	.accordion-icon-mobile {
+		display: block;
+
+		transform: translateY(-2px);
+	}
+
+	.ab--recomendation-panel__wrapper.active {
+		display: none;
+
+		min-height: unset;
+	}
+
+	.accordion-icon-mobile.active {
+		transform: translateY(2px) rotate(180deg);
+	}
+
+	.select-button {
+		text-align: start;
+
+		padding: 5px 8px;
+
+		border-radius: 5px;
+
+		border: 1px solid #d9d9d9;
+	}
+
+	#sidebar-cart {
+		overflow-x: hidden;
+	}
+
+	.error {
+		border-radius: 5px !important;
+
+		border: 1px solid #e22120 !important;
+	}
+
+	.dropdown-list {
+		width: 190%;
+	}
+}
+
+@media (max-width: 380px) {
+	.Drawer__Footer {
+		height: unset;
+	}
+}

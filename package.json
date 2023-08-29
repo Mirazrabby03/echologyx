@@ -1,5 +1,5 @@
 {
-    "name": "rocket-mill",
+    "name": "sitenco",
     "version": "2.0.0",
     "description": "",
     "scripts": {
@@ -7,11 +7,8 @@
         "serve": "nodemon services/hotReload.js",
         "cli": "node services/cli.js"
     },
-    "keywords": [
-        "Echo",
-        "Transpiler"
-    ],
-    "author": "Matt Tamal",
+    "keywords": [],
+    "author": "",
     "license": "ISC",
     "dependencies": {
         "@babel/cli": "^7.6.3",
@@ -56,5 +53,8 @@
         "webpack-livereload-plugin": "^2.2.0",
         "webpack-node-externals": "^1.7.2",
         "webpack-shell-plugin": "^0.5.0"
+    },
+    "devDependencies": {
+        "babel-preset-minify": "^0.5.1"
     }
 }

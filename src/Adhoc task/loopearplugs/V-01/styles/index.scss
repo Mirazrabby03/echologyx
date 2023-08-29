@@ -1,0 +1,21 @@
+.container-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+  }
+  
+  .image {
+    grid-row: 1 / span 2;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    shape-outside: circle(50%);
+    clip-path: circle(50%);
+  }
+  
+  .text {
+    grid-column: 2 / -1;
+  }
+  

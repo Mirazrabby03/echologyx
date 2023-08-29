@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar LOCAL_URL=\"http://localhost:4000\",awaitSocketIO=function(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:25;try{var c=io.connect(LOCAL_URL);a(c)}catch(c){setTimeout(function(){return awaitSocketIO(a)},b)}};/* harmony default export */ __webpack_exports__[\"default\"] = (function(a){var b=\"\".concat(LOCAL_URL,\"/socket-io\"),c=document.createElement(\"script\");c.setAttribute(\"src\",\"http://localhost:4000/socket-io\"),document.body.appendChild(c),awaitSocketIO(a)});\n\n//# sourceURL=webpack:///./transpiler/tamper/awaitSocketIO.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar LOCAL_URL=\"http://localhost:4000\",awaitSocketIO=function(a){var b=1<arguments.length&&arguments[1]!==void 0?arguments[1]:25;try{var c=io.connect(LOCAL_URL);a(c)}catch(c){setTimeout(function(){return awaitSocketIO(a)},b)}};/* harmony default export */ __webpack_exports__[\"default\"] = (function(a){var b=\"\".concat(LOCAL_URL,\"/socket-io\"),c=document.createElement(\"script\");c.id=\"socket-io-tamper\",c.setAttribute(\"src\",\"http://localhost:4000/socket-io\"),document.body.appendChild(c),awaitSocketIO(a)});\n\n//# sourceURL=webpack:///./transpiler/tamper/awaitSocketIO.js?");
 
 /***/ }),
 
@@ -141,7 +141,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! C:\\Users\\matth\\WebstormProjects\\echo-transpiler\\transpiler\\tamper\\index.js */\"./transpiler/tamper/index.js\");\n\n\n//# sourceURL=webpack:///multi_./transpiler/tamper/index.js?");
+eval("module.exports = __webpack_require__(/*! /home/smazad/Workspace/echologyx/echo-transpiler/transpiler/tamper/index.js */\"./transpiler/tamper/index.js\");\n\n\n//# sourceURL=webpack:///multi_./transpiler/tamper/index.js?");
 
 /***/ })
 

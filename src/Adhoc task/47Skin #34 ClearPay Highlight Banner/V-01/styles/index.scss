@@ -1,0 +1,54 @@
+.highlight-banner .button.afterpay-logo.brand-clearpay.compact-badge.type-badge.black-on-mint{
+    display: none;
+}
+.highlight-banner .banner-section{
+    width: 330px;
+    margin-top: 15px;
+}
+.highlight-banner .banner-section__content{
+    background-color: rgb(178, 252, 228);
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 5px 15px;
+}
+
+.highlight-banner .banner-section__content__logo{
+    display: flex;
+    align-items: center;
+}
+
+.highlight-banner .compact-badge-logo-banner{
+    transform: scale(1.5);
+}
+
+.highlight-banner .banner-section__content__text{
+    line-height: 1.5;
+}
+
+
+@media screen and (max-width: 990px) {
+    .highlight-banner .compact-badge-logo-banner{
+        transform: scale(1.6);
+    }
+    .highlight-banner .banner-section{
+        width: 100%;
+    }
+    .highlight-banner .banner-section__content{
+        justify-content: center;
+        gap: 35px;
+    }
+    .highlight-banner .banner-section__content__text{
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .highlight-banner .banner-section__content{
+        gap: 25px;
+    }
+    .highlight-banner .banner-section__content__text{
+        font-size: 16px;
+    }
+}

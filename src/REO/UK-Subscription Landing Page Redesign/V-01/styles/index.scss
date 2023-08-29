@@ -1,0 +1,125 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	transition: padding 0.5s ease-in;
+}
+body.sticky--scrolled-down,
+body.sticky--scrolled-up {
+	padding-top: 80px;
+}
+.subscription-faq-content {
+	padding-top: 80px !important;
+}
+.button-container {
+	display: flex !important;
+}
+
+.button-container-mobile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pagebuilder-button-primary.subscription_faq_button {
+	background: white !important;
+	color: black !important;
+	margin-left: 10px;
+	max-width: 218px;
+}
+
+.device-wrapper {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	background-position: left top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	margin-left: 8px;
+	margin-right: 8px;
+	align-self: stretch;
+	background: #efefef;
+	border-radius: 10px;
+}
+
+.device-container-mobile {
+	text-align: center;
+	width: 100%;
+	height: 145px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagebuilder-column.mobile-banner-content h2 strong span {
+	font-size: 24px !important;
+}
+.pagebuilder-column-group.custom-selection .pagebuilder-column {
+	width: 25% !important;
+}
+.device-container {
+	text-align: center;
+	padding-inline: 20px;
+}
+
+.subscription-detail:not(.mobile) .subscription-tier-list li > p {
+	display: none;
+}
+.subscription-detail.mobile .subscription-tier-list li > p {
+	display: none;
+}
+
+.subscription-tier-list li {
+	background: white;
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+	flex-basis: 208px;
+	border: 1px solid #d9d9d9;
+	padding: 18px 14px !important;
+}
+
+.custom-text {
+	margin-top: 5px;
+	line-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.subscription-tier-list li {
+		flex-direction: column !important;
+		width: 100%;
+		font-size: 15px;
+		flex-basis: initial !important;
+	}
+
+	.subscription-tier-list {
+		display: flex;
+		align-items: center;
+	}
+
+	ul.subscription-tier-list {
+		margin-left: 40px;
+		margin-right: 40px;
+		padding-inline-start: unset !important;
+	}
+	.price-info {
+		display: none !important;
+	}
+	.pagebuilder-button-primary.subscription_faq_button {
+		margin-left: unset;
+		margin-top: 10px;
+		font-size: 11px;
+		padding: 14px 22px;
+	}
+
+	.subscription-detail.mobile .pagebuilder-column-group .pagebuilder-column:not(.image-box) {
+		background-color: white;
+	}
+
+	.subscription-detail.mobile.epod-nic .pagebuilder-column-group .pagebuilder-column:not(.image-box) ul.subscription-tier-list {
+		margin-top: 30px;
+	}
+}

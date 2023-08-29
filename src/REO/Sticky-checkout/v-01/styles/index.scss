@@ -1,0 +1,28 @@
+.sticky-checkout-button {
+	outline: none !important;
+	width: 100%;
+	display: none;
+	padding: 0.5rem 1.25rem;
+	white-space: nowrap;
+	border-width: 1px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	--tw-bg-opacity: 1;
+	background-color: rgba(138, 115, 80, var(--tw-bg-opacity));
+	--tw-border-opacity: 1;
+	border-color: rgba(138, 115, 80, var(--tw-border-opacity));
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
+	height: 3.5rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+}
+.sticky-checkout .sticky-checkout-button {
+	display: flex;
+}

@@ -1,0 +1,37 @@
+
+.banner {
+    display: flex;
+    align-items: center;
+    padding: 10px 8px;
+    background-color: #F3F5E9;
+    margin: 16px 30px;
+    border-radius: 2px;
+}
+.banner__inner__text {
+        
+     font-style: normal;
+    font-weight: 450;
+    font-size: 13px;
+    line-height: 19px;
+    color: #006750;
+}
+.banner__inner__text__strong {
+    font-weight: 700;
+}
+    
+.jump_svg {
+    width: 39px;
+    height: 39px;
+    margin: 0px 8px 0px 0px;
+}
+
+
+@media screen and (max-width: 640px) {
+    .banner {
+        margin: 8px 23px;
+    }
+    .banner__inner__text {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}

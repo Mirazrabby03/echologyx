@@ -1,0 +1,39 @@
+.container .content-box.content-box--fill p:nth-child(1){
+    margin-bottom: 20px;
+}
+.content-box.content-box--fill.content-box--text-center.content-box--center.text-container{
+    line-height: 20px;   
+}
+
+.container .content-box.content-box--fill .content-box__text{
+    font-family: Assistant, sens-serif;
+    font-size: 16px;
+    line-height: 2px;
+    font-weight: normal;
+}
+
+.center-text{
+    text-align: center !important;
+}
+.container .content-box.content-box--fill p:nth-child(3){
+    text-align: center;
+    margin-block-start: unset;
+    margin-top: 40px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .container .content-box.content-box--fill .content-box__text{
+        font-size: 18px;
+    }
+  }
+  @media only screen and (max-width: 640px) {
+    .couple-videos{
+        padding-top: unset !important;
+    }
+    .container .content-box.content-box--fill p:nth-child(3) a{
+        font-size: 16px;
+    }
+    .container .content-box.content-box--fill p:nth-child(1){
+        font-size: 2.5rem;
+    }
+  }
