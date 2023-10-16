@@ -1,0 +1,188 @@
+.brand-recommendation_slot {
+	display: block !important;
+	border-top: 4px solid #000;
+	border-bottom: 4px solid #000;
+	margin-left: -60px;
+	margin-right: -52px;
+}
+
+.brand-recommendation_slot .b-carousel.m-products .b-carousel-ctrl.m-next {
+	right: 0px !important;
+	transform: translateY(-50%) !important;
+
+	svg {
+		height: unset !important;
+		width: unset !important;
+	}
+}
+
+.brand-recommendation_slot .b-carousel.m-products .b-carousel-ctrl.m-prev {
+	transform: translateY(-50%) !important;
+}
+
+.brand-recommendation_slot .b-carousel.m-products .b-carousel-ctrl.m-prev svg {
+	height: unset !important;
+	width: unset !important;
+}
+
+.recommendation__text {
+	text-transform: uppercase;
+	font-size: 24px;
+	font-family: funktionalgroteskpro !important;
+	font-weight: 400;
+	line-height: 32px;
+	width: 100% !important;
+}
+.brand__logo {
+	position: absolute;
+	margin-left: 40px;
+	margin-top: 33px;
+	cursor: pointer;
+}
+// .brand__logo__image {
+// 	width: 124px;
+// }
+.brand__button__container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 47px;
+	padding-top: 20px;
+}
+.brand__button {
+	border: 1px solid rgba(0, 0, 0, 1);
+	height: 32px;
+	padding: 4px 16px 4px 16px !important;
+	border-radius: 40px;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.brand__button:hover {
+	background: #000;
+	color: #fff;
+}
+@media (min-width: 768px) {
+	#cq_recomm_slot-089a85db740941e86a76658823 {
+		display: flex;
+	}
+	#cq_recomm_slot-089a85db740941e86a76658823 .b-carousel {
+		width: fit-content;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		margin-right: 36px;
+		padding-left: 48px;
+		border-top: unset !important;
+	}
+	#cq_recomm_slot-089a85db740941e86a76658823 .b-carousel .pdp-reco_wrapper {
+		padding-top: 48px;
+	}
+	#cq_recomm_slot-089a85db740941e86a76658823 .b-carousel .b-carousel-ctrl.m-prev {
+		left: 15px;
+	}
+	#cq_recomm_slot-089a85db740941e86a76658823 .b-carousel .b-carousel-item {
+		// max-width: 31%;
+		// min-width: 31%;
+		max-width: 27%;
+		min-width: 27%;
+	}
+	.moodshot__container {
+		width: 39%;
+		max-width: 523px;
+		min-width: 445px;
+		// max-height: 587px;
+	}
+	.modshoot__image {
+		height: 100%;
+		object-fit: cover;
+	}
+	#cq_recomm_slot-373eafee1563513fa84ccffdc9 .b-carousel {
+		margin-top: unset;
+		border-top: unset !important;
+	}
+}
+@media (max-width: 768px) {
+	.brand-recommendation_slot {
+		border-top: unset !important;
+		border-bottom: unset !important;
+		margin-left: unset;
+		margin-right: unset;
+	}
+	.brand__logo__image {
+		width: unset !important;
+	}
+	#cq_recomm_slot-089a85db740941e86a76658823 .b-carousel-track {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-gap: 16px;
+	}
+	#cq_recomm_slot-089a85db740941e86a76658823 .b-carousel-track .b-carousel-item {
+		max-width: 91%;
+		min-width: 91%;
+	}
+	.recommendation__text {
+		font-weight: 500 !important;
+		line-height: 29px !important;
+		max-width: unset !important;
+	}
+	.l-pdp-slots {
+		padding-top: 33px !important;
+	}
+	.recommendation__container {
+		margin-bottom: 21px;
+	}
+	.brand__logo {
+		margin-left: 24px;
+		margin-top: 24px;
+		pointer-events: none;
+	}
+	.moodshot__container {
+		margin: 0 -15px;
+	}
+	.brand__button {
+		font-size: 12px !important;
+	}
+	.moodShot__button__container {
+		position: relative;
+		bottom: 73px;
+		left: 24px;
+		z-index: 8;
+		width: fit-content;
+		font-size: 12px !important;
+	}
+	.moodShot__button {
+		height: 32px;
+		background: #fff;
+		border-radius: 40px;
+		padding: 4px 16px 4px 16px;
+		border: 1px solid #000;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+	.brand__button__container {
+		padding-top: unset;
+	}
+	.modshoot__image {
+		width: 100%;
+	}
+
+	.l-pdp-slots_inner .b-carousel {
+		border-top: unset !important;
+		margin-bottom: 5px !important;
+	}
+	.misterTee__logo {
+		right: 24px !important;
+	}
+}
+
+//full width adjust
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.brand-recommendation_slot {
+		margin-left: -32px;
+		margin-right: -32px;
+	}
+}

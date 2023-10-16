@@ -1,6 +1,3 @@
-import './styles/index.scss';
-/* DO NOT IMPORT ANYTHING */
-
 function waitForElem(waitFor, callback, minElements = 1, isVariable = false, timer = 10000, frequency = 25) {
 	let elements = isVariable ? window[waitFor] : document.querySelectorAll(waitFor);
 	if (timer <= 0) return;
@@ -51,13 +48,6 @@ let products = [
 		price: '29,99',
 		image: 'https://snocks.com/cdn/shop/files/Invisible-Titelbild-Onlineshop3d-weiss_8410fccf-9880-4163-befc-6fa7c4da841e.jpg?v=1687436592'
 	},
-	// {
-	// 	id: 'retrosnocks-weiss',
-	// 	name: 'Hohe Sportsocken mit Streifen aus Bio-Baumwolle',
-	// 	quantity: 1,
-	// 	price: '29,99',
-	// 	image: 'https://snocks.com/cdn/shop/files/Retros-Titelbild-Onlineshop3d-weiss_788dac77-89d0-42a8-b2be-b663bb74f876.jpg?v=1687346439'
-	// },
 	{
 		id: 'tennissocken-schwarz-weiss',
 		name: 'Tennissocken aus Bio-Baumwolle',
@@ -102,11 +92,9 @@ function addToCart(id) {
 		);
 	}, 1000);
 
-	// document.querySelector('.ab--product-infos__label').addEventListener('click', () => {  
         gtag('event', 'add_cross_sell_cart', {
 
             });
-    // })
 }
 
 function getCartItems() {
@@ -125,13 +113,9 @@ function getCartItemsV2() {
 	const items = [];
 
 	document.querySelectorAll('.Cart__ItemList .CartItem__Wrapper .CartItem__Info > a').forEach(e => {
-		// const urlParams = new URLSearchParams(e.search);
-		// const variantId = urlParams.get('variant');
-
 		const url = e.getAttribute('href');
 		const regex = /\/products\/(.*?)\?/;
 		const match = url.match(regex);
-		console.log('match', match[1]);
 		items.push(match[1]);
 	});
 
@@ -148,8 +132,6 @@ function renderRecomendationPanel() {
 	recomendationPanelDesktop.classList.add('ab--recomendation-panel');
 	
 	recomendationPanel.className = 'ab--recomendation-panel swiper';
-	// style="--bottom: 195.5px;"
-	// recomendationPanel.style.setProperty('--bottom', '195.5px');
 
 	recomendationPanel.innerHTML = `<div class='ab--recomendation-panel__title__wrapper'>
     <span class="ab--recomendation-panel__title">Diese Produkte könnten dir auch gefallen:</span>
@@ -167,14 +149,13 @@ function renderRecomendationPanel() {
     </div>
     <div class="ab--recomendation-panel__wrapper"></div>`;
 
-	// if (window.innerWidth < 768) {
-	// 	sidebar.insertAdjacentElement('afterbegin', recomendationPanel);
-	// 	isMobile = true;
-	// } else {
-	// 	sidebar.insertAdjacentElement('afterbegin', recomendationPanelDesktop);
-	// }
-
-    sidebar.insertAdjacentElement('afterbegin', recomendationPanelDesktop);
+	if (window.innerWidth < 768) {
+		recomendationPanel.classList.add('mobile-recomendation-panel', 'hide-panel');
+		sidebar.insertAdjacentElement('afterbegin', recomendationPanel);
+		isMobile = true;
+	} else {
+		sidebar.insertAdjacentElement('afterbegin', recomendationPanelDesktop);
+	}
 
 	window.addEventListener('resize', sizeHandler);
 	sizeHandler();
@@ -183,7 +164,7 @@ function renderRecomendationPanel() {
 			setTimeout(() => {
 			recomendationPanel.classList.add('mobile');
 			if (document.querySelector('.Drawer__Footer')) {
-				const bottom = document.querySelector('.Drawer__Footer').getBoundingClientRect().height;
+				const bottom = document.querySelector('.Drawer__Footer').getBoundingClientRect().height -1;
 				recomendationPanel.style.setProperty('--bottom', (Number(bottom) + 0.6) + 'px');
 				setTimeout(() => {
 				recomendationPanel.style.setProperty('--mobile-display', 'flex');
@@ -199,6 +180,7 @@ function renderRecomendationPanel() {
 
 	const innerContent = products
 		.map((product, index) => {
+			if(isMobile) return;
 			return `
 		<div class="ab--recomendation-panel__product swiper-slide" data-index="${index}" data-id='${product.id}'>
 			<div class="ab--recomendation-panel__product__container">
@@ -261,15 +243,14 @@ function renderRecomendationPanel() {
 		});
 	});
 
-	// close dropdown list if clicked outside
+	//close dropdown list if clicked outside
 
 	// select item from dropdown
 	document.querySelectorAll('.dropdown-list-item').forEach(item => {
 		item.addEventListener('click', function(e) {
 			const text = e.target.textContent;
-			// console.log(text,'text');
 			const value = e.target.getAttribute('value');
-			// console.log(value,'value');
+			
 			e.target.closest('.custom-select').querySelector('.select-button').textContent = text;
 			e.target
 				.closest('.custom-select')
@@ -277,7 +258,6 @@ function renderRecomendationPanel() {
 				.setAttribute('value', value);
 			//remove class open from all the dropdown list
 			document.querySelectorAll('.dropdown-list').forEach(item => {
-				// item.classList.remove('open');
 				item.classList.add('open');
 			});
 
@@ -286,36 +266,6 @@ function renderRecomendationPanel() {
 			// e.target.closest('.select-button').classList.remove('error');
 		});
 	});
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const customSelects = document.querySelectorAll('.custom-select');
-    
-        customSelects.forEach(select => {
-            const selectButton = select.querySelector('.select-button');
-            const selectItems = select.querySelector('.dropdown-list');
-    
-            // selectButton.addEventListener('click', function() {
-            //     // Toggle visibility of the dropdown items
-            //     selectItems.style.display = selectItems.style.display === 'none' ? 'block' : 'none';
-            // });
-    
-            select.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevent event from propagating to document
-    
-                // Hide dropdown items when clicking outside
-                // document.addEventListener('click', function() {
-                //     selectItems.style.display = 'none';
-                // });
-    
-                // Position the dropdown items exactly below the select button
-                const rect = selectButton.getBoundingClientRect();
-
-                console.log('applying effectsssss')
-                selectItems.style.left = rect.left + 'px';
-                selectItems.style.top = rect.bottom + 'px';
-            });
-        });
-    });
 
 	document.querySelectorAll('.ab--recomendation-panel__product__addToCart').forEach(button => {
 		button.addEventListener('click', e => {
@@ -326,7 +276,6 @@ function renderRecomendationPanel() {
 					.closest('.ab--recomendation-panel__product__wrapper')
 					.querySelector('.custom-select').classList.add('error');
 					// .querySelector('.select-button').classList.add('error');
-					// console.log('adding borderrrrrrrr')
 
 				return;
 			}
@@ -341,16 +290,12 @@ function renderRecomendationPanel() {
 	});
 
 	if (window.innerWidth < 768) {
-		// console.log('Inside mobileeee');
-		// console.log('Swiper', window.Swiper);
 		waitForElem('Swiper',swipers => {
-			// console.log(swipers, 'swipers');
 			const swiper = new Swiper('.ab--recomendation-panel.swiper', {
 				slidesPerView: 'auto',
 				freeMode: true,
 				initialSlide: 0,
 			});
-			// window.PRSS = swiper;
 			swiperOBJ = swiper;
 		},1,true);
 	}
@@ -362,7 +307,6 @@ function detectCartItemChange() {
 	const config = { attributes: true, childList: true, subtree: true };
 	const callback = function() {
 		if (Number(document.querySelectorAll('.Cart__ItemList .CartItem__Wrapper').length) !== cartItems) {
-			// console.log('Miraz', 'cart item changed');
 			cartItems = Number(document.querySelectorAll('.Cart__ItemList .CartItem__Wrapper').length);
 			if(isMobile){
 				recomendationItemArrangementMobile();
@@ -378,6 +322,7 @@ function detectCartItemChange() {
 function addItemToSLider(productID, index="new") {
 	if(!swiperOBJ || !productID) return;
 	const product = products.find(product => product.id === productID);
+
 	const renderItem = `
 	<div class="ab--recomendation-panel__product swiper-slide" data-index="${index}" data-id='${product.id}'>
 		<div class="ab--recomendation-panel__product__container">
@@ -423,11 +368,7 @@ function addItemToSLider(productID, index="new") {
 		</div>
 	</div>
 	`
-
 	swiperOBJ.appendSlide(renderItem);
-	// swiperOBJ.prependSlide(renderItem);
-	// swiperOBJ.prependSlide(renderItem);
-
 	
 	//toggle dropdown 
 	document.querySelector(`.ab--recomendation-panel__product[data-id="${product.id}"] .custom-select`).addEventListener('click', e => {
@@ -441,13 +382,10 @@ function addItemToSLider(productID, index="new") {
 	// new added items dropdown list functionality
 	document.querySelectorAll(`.ab--recomendation-panel__product[data-id="${product.id}"] .dropdown-list-item`).forEach(item => {
 		item.addEventListener('click', e=> {
-			// console.log('Miraz', item);
 
 			
 			const text = e.target.textContent;
-			// console.log(text,'text');
 			const value = e.target.getAttribute('value');
-			// console.log(value,'value');
 			e.target.closest('.custom-select').querySelector('.select-button').textContent = text;
 			e.target
 				.closest('.custom-select')
@@ -474,8 +412,6 @@ function addItemToSLider(productID, index="new") {
 			e.target
 				.closest('.ab--recomendation-panel__product__wrapper')
 				.querySelector('.custom-select').classList.add('error');
-				// .querySelector('.select-button').classList.add('error');
-				// console.log('adding borderrrrrrrrrrrrrrrrrrrrrrr')
 			return;
 		}
 		addToCart(value);
@@ -487,90 +423,77 @@ function addItemToSLider(productID, index="new") {
 }
 
 function removeItemFromSLider(productID) {
-	console.log('removeItemFromSLider', productID)
 	if(!swiperOBJ || !productID) return;
 	
 	document.querySelectorAll('.ab--recomendation-panel__product').forEach((elm, i) => {
 		if(elm === document.querySelector(`.ab--recomendation-panel__product[data-id="${productID}"]`)){
-
 			swiperOBJ.removeSlide(i)
+			document.querySelectorAll('.ab--recomendation-panel__wrapper > a:not(a[href])').forEach((elm) => {
+				elm.remove();
+			})
+			return;
 		}
 	})
 }
+
 
 function recomendationItemArrangementMobile() {
 	const cartItemList = getCartItems();
 	if(!cartItemList) return;
 	const oldCartItem = currentCartItems;
 	const newCartItem = getCartItemsV2();
-	const removedItemFromCart = oldCartItem.filter(item => !newCartItem.includes(item));
 	currentCartItems = oldCartItem !== newCartItem ? newCartItem : currentCartItems;
+	const removedItemFromCart = oldCartItem.filter(item => !newCartItem.includes(item));
 	
 	//CHeck which items are not available in the recomendation panel. If not available then add those items to the slider
 	products.forEach(product => {
 		if(!document.querySelector(`.ab--recomendation-panel__product[data-id="${product.id}"]`)){
-			addItemToSLider(product.id);
+			if(!newCartItem.includes(product.id)){
+				addItemToSLider(product.id);
+			}
 		}
 	})
 	
 	//if there is any item in cart then we will remove those from recomendation palnel
 	cartItemList.forEach(item => {
-		console.log(item,'item');
 		if (products.find(product => product.variants.find(variant => variant.id === Number(item)))) {
 			const product = products.find(product => product.variants.find(variant => variant.id === Number(item)));
-			console.log('found', product);
 			removeItemFromSLider(product.id);
 		}
 	});	
+				
 
-	//if length of the item (eccept hide-item) is more tan 3 then add (hide-item) class to the rest of the items
-	const recomendationItems = document.querySelectorAll('.ab--recomendation-panel__wrapper .ab--recomendation-panel__product');
-	console.log('aaa',recomendationItems.length);
+		//will show only 3 items in the slider loop through all the items and remove the rest of the items
+		const recomendationItems = document.querySelectorAll('.ab--recomendation-panel__wrapper .ab--recomendation-panel__product');
+		let availableRecommendationItems = recomendationItems.length;
 
-	// let availableRecommendationItems = recomendationItems.length;
-	// for (let index = 0; index < recomendationItems.length ; index++) {
-	// 	const item = recomendationItems[index];
-	// 	if (availableRecommendationItems > 3) {			
-	// 		if(item.getAttribute('data-id') !== removedItemFromCart[0]){
-	// 			removeItemFromSLider(item.getAttribute('data-id'));
-	// 			availableRecommendationItems--;
-	// 		}
-	// 	}
-	
-	// 	removeItemFromSLider(item.getAttribute('data-id'));
-
-	// }
-
-
-	let availableRecommendationItems = recomendationItems.length;
-	for (let index = recomendationItems.length - 1; index >= 0; index--) {
-		const item = recomendationItems[index];
-		if (availableRecommendationItems > 3) {			
-			if(item.getAttribute('data-id') !== removedItemFromCart[0]){
-				removeItemFromSLider(item.getAttribute('data-id'));
-				availableRecommendationItems--;
-			}
+		for (let index = recomendationItems.length - 1; index >= 0; index--) {
+			const item = recomendationItems[index];
+			if (availableRecommendationItems > 3) {			
+				if(item.getAttribute('data-id') !== removedItemFromCart[0]){
+					removeItemFromSLider(item.getAttribute('data-id'));
+					availableRecommendationItems--;
+				}
+			}		
 		}
-	}
 
-
-
-	//if suggested is 0 then hide the whole panel else show the panel
-	if (recomendationItems.length === 0) {
-		document.querySelector('.ab--recomendation-panel').classList.add('hide-panel');
-	} else {
-		document.querySelector('.ab--recomendation-panel').classList.remove('hide-panel');
-	}
-
-	//if there is 0 items in cart then hide the whole panel
-
-	if (cartItems === 0) {
-		document.querySelector('.ab--recomendation-panel').classList.add('hide-panel');
-	} else {
-		if (recomendationItems.length !== 0) {
+		//if suggested is 0 then hide the whole panel else show the panel
+		if (recomendationItems.length === 0) {
+			document.querySelector('.ab--recomendation-panel').classList.add('hide-panel');
+		} else {
 			document.querySelector('.ab--recomendation-panel').classList.remove('hide-panel');
 		}
-	}
+
+		//if there is 0 items in cart then hide the whole panel
+
+		if (cartItems === 0) {
+			document.querySelector('.ab--recomendation-panel').classList.add('hide-panel');
+		} else {
+			if (recomendationItems.length !== 0) {
+				document.querySelector('.ab--recomendation-panel').classList.remove('hide-panel');
+			}
+		}
+
 }
 
 function recomendationItemArrangement() {
@@ -580,15 +503,11 @@ function recomendationItemArrangement() {
 	currentCartItems = oldCartItem !== newCartItem ? newCartItem : currentCartItems;
 	//hide items from ab-panel if it is already in cart (using this class hide-item)
 	const cartItemList = getCartItems();
-	// console.log(cartItemList,'cartItemList');
-	// console.log(products, 'products');
 	document.querySelectorAll('.ab--recomendation-panel__product').forEach(item => item.classList.remove('hide-item'));
 	//re inject the items if it is not in cart
 
 	cartItemList.forEach(item => {
-		// console.log(item,'item');
 		if (products.find(product => product.variants.find(variant => variant.id === Number(item)))) {
-			// console.log('found');
 			const product = products.find(product => product.variants.find(variant => variant.id === Number(item)));
 			//unhide all the items first
 			document.querySelector(`.ab--recomendation-panel__product[data-id="${product.id}"]`) &&
@@ -605,38 +524,28 @@ function recomendationItemArrangement() {
 	const recomendationPanel = document.querySelector('.ab--recomendation-panel__wrapper');
 	const recomendationItems = recomendationPanel.querySelectorAll('.ab--recomendation-panel__product:not(.hide-item)');
 	let availableRecommendationItems = recomendationPanel.querySelectorAll('.ab--recomendation-panel__product:not(.hide-item)').length;
-	// console.log('Miraz', recomendationItems.length, 'recomendationItems.length');
-
-	// unhide all the items first
-	// if (recomendationItems.length > 3) {
-		// console.log('Miraz', 'more than 3');
 
 		
 
 		for (let index = recomendationItems.length - 1; index >= 0; index--) {
 			const item = recomendationItems[index];
 			if (availableRecommendationItems > 3) {
-				console.log(item.getAttribute('data-id'),'item.getAttribute(data-id)')
-				console.log(removedItemFromCart[0],'removedItemFromCart')
 				if(item.getAttribute('data-id') !== removedItemFromCart[0]){
 					item.classList.add('hide-item');
 					availableRecommendationItems--;				
 				}
 			}
 		}
-	// }
+	
 
 
 	//if suggested is 0 then hide the whole panel else show the panel
 	if (recomendationItems.length === 0) {
-		// console.log('Helooooooooooooooo');
 		document.querySelector('.ab--recomendation-panel').classList.add('hide-panel');
 	} else {
 		document.querySelector('.ab--recomendation-panel').classList.remove('hide-panel');
 	}
 
-	//if there is 0 items in cart then hide the whole panel
-	// console.log('CartItemsssssssssss', cartItems);
 	if (cartItems === 0) {
 		document.querySelector('.ab--recomendation-panel').classList.add('hide-panel');
 	} else {
@@ -655,107 +564,139 @@ function mainJs(panel) {
 	const sidebar = document.querySelector('#sidebar-cart');
 	if (!sidebar) return;
 	
-	(function() {	
-			var swiperCSS = document.createElement("link");	
-			swiperCSS.setAttribute("rel", "stylesheet");	
-			swiperCSS.setAttribute("href", "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css");	
-			document.querySelector("head").appendChild(swiperCSS);	
-			var script = document.createElement("script");	
-			script.src = "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js";	
-			document.head.appendChild(script);
-		})();
-	mainCss();
-	// console.log(`SNO556 : v-01`);
 
-	waitForElem('.Cart__ItemList .CartItem__Wrapper .CartItem__Info > a', items => {
-		currentCartItems = getCartItemsV2();
-	})
+	if(!window.Swiper){
 
-	
-	document.body.addEventListener('click', function(e) {
-		// console.log(e.target);
-		if (e.target.closest('.dropdown-list-item') || !e.target.closest('.select-button')) {
-			// console.log('clicked');
-			document.querySelectorAll('.dropdown-list').forEach(item => {
-				// item.classList.remove('open');
-				item.classList.add('open');
-			});
-		}
-	});
+        (function() {   
 
-	const productsURLs = products.map(product => {
-		return `https://snocks.com/products/${product.id}.js`;
-	});
-	getProducts(productsURLs).then(res => {
-		console.log(res, 'res');
-		res.forEach(product => {
-			const newVariants = product.variants.map(variant => {
-				return {
-					id: variant.id,
-					size: variant.option1,
-					available: variant.available,
-					title: variant.title,				
-				};
-			});
-			products.find(item => item.id === product.handle).variants = newVariants;
+                var swiperCSS = document.createElement("link"); 
 
-			let price = null;
-			if (Shopify.currency.active === 'EUR') {
-				price = Number(product.price) / 100;
-				price =  ' €' + price;
-				// price = ' €' + ' ' + price;
-				price = price.replace('.', ',');
-			}else if (Shopify.currency.active === 'CHF') {
-				price = Number(product.price) / 100;
-				price = price.toFixed(2);
-				price = ' CHF' + ' ' + price;
-				// price = price.replace('.', ',');
+                swiperCSS.setAttribute("rel", "stylesheet");    
+
+                swiperCSS.setAttribute("href", "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"); 
+
+                document.querySelector("head").appendChild(swiperCSS);  
+
+                var script = document.createElement("script");  
+
+                script.src = "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"; 
+
+                document.head.appendChild(script);
+
+        })();
+	}
+
+		waitForElem('.Cart__ItemList .CartItem__Wrapper .CartItem__Info > a', items => {
+			currentCartItems = getCartItemsV2();
+		})
+
+		
+		document.body.addEventListener('click', function(e) {
+			if (e.target.closest('.dropdown-list-item') || !e.target.closest('.select-button')) {
+		
+				document.querySelectorAll('.dropdown-list').forEach(item => {
+			
+					item.classList.add('open');
+				});
 			}
-
-			products.find(item => item.id === product.handle).price = price;
-			products.find(item => item.id === product.handle).title = product.title;
-			products.find(item => item.id === product.handle).url = product.url;
 		});
 
-		// console.log(products, 'products from api');
-		renderRecomendationPanel();
-
-		waitForElem(
-			'.Cart__ItemList .CartItem__Wrapper',
-			items => {
-				cartItems = Number(document.querySelectorAll('.Cart__ItemList .CartItem__Wrapper').length);
-			},
-			1,
-			false,
-			10000,
-			1000
-		);
-
-		//hide the panel if drawer cart close button is clicked
-		document.querySelector('.Drawer__Close').addEventListener('click', function() {
-			document.querySelector('.ab--recomendation-panel').classList.add('hide-opacity');
-			setTimeout(() => {
-				document.querySelector('.ab--recomendation-panel').classList.remove('hide-opacity');
-			}, 2000);
+		const productsURLs = products.map(product => {
+			return `https://snocks.com/products/${product.id}.js`;
 		});
+		getProducts(productsURLs).then(res => {
+			res.forEach(product => {
+				const newVariants = product.variants.map(variant => {
+					return {
+						id: variant.id,
+						size: variant.option1,
+						available: variant.available,
+						title: variant.title,				
+					};
+				});
+				products.find(item => item.id === product.handle).variants = newVariants;
 
-		detectCartItemChange();
-		if(isMobile){
-			recomendationItemArrangementMobile();
-		}else{
-			recomendationItemArrangement();
-		}
-	});
+				let price = null;
+				if (Shopify.currency.active === 'EUR') {
+					price = Number(product.price) / 100;
+					price =  ' €' + price;
+					// price = ' €' + ' ' + price;
+					price = price.replace('.', ',');
+				}else if (Shopify.currency.active === 'CHF') {
+					price = Number(product.price) / 100;
+					price = price.toFixed(2);
+					price = ' CHF' + ' ' + price;
+					// price = price.replace('.', ',');
+				}
+
+				products.find(item => item.id === product.handle).price = price;
+				products.find(item => item.id === product.handle).title = product.title;
+				products.find(item => item.id === product.handle).url = product.url;
+			});
+
+			renderRecomendationPanel();
+
+			waitForElem(
+				'.Cart__ItemList .CartItem__Wrapper',
+				items => {
+					cartItems = Number(document.querySelectorAll('.Cart__ItemList .CartItem__Wrapper').length);
+				},
+				1,
+				false,
+				10000,
+				1000
+			);
+
+			//hide the panel if drawer cart close button is clicked
+			document.querySelector('.Drawer__Close').addEventListener('click', function() {
+				document.querySelector('.ab--recomendation-panel').classList.add('hide-opacity');
+				setTimeout(() => {
+					document.querySelector('.ab--recomendation-panel').classList.remove('hide-opacity');
+					console.log('adjusted')
+				}, 1000);
+			});
+
+			detectCartItemChange();
+			if(isMobile){
+				setTimeout(() => {
+					recomendationItemArrangementMobile();
+				}, 2000);
+			}else{
+				recomendationItemArrangement();
+			}
+			
+		});
+	// }
+	
+}
+
+function addLoader(){
+	// add a sceleton loader above the drawer footer and remove it when the cart items are loaded
+	const loader = document.createElement('div');
+	loader.className = 'ab--loader';
+	loader.innerHTML = `
+	<div class="ab--loader__wrapper">
+		<div class="loader-container">
+			<div class="loader">
+				<div class="dot"></div>
+				<div class="dot"></div>
+				<div class="dot"></div>
+			</div>
+		</div>
+	</div>`;
+	document.querySelector('.Drawer__Footer') && document.querySelector('.Drawer__Footer').insertAdjacentElement('beforebegin', loader);
+
+	//remove the loader after 3 seconds of recomended items loaded
+	setTimeout(() => {
+		document.querySelector('.ab--loader') && document.querySelector('.ab--loader').remove();
+	}, 3000);
 }
 
 waitForElem('#sidebar-cart', mainJs);
+waitForElem('.Drawer__Footer', addLoader);
 
-// waitForElem("#sidebar-cart, .Drawer__Footer", (elements) => {
-//   if(elements){
-// 	console.log(`SNO556 : v-01`);
 
-// 	mainJs();
-//   }
-// },2);
+
+
 
 

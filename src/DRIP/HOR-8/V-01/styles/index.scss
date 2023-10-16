@@ -1,0 +1,124 @@
+.Hor-8 .cart__header__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.delivery__container {
+	display: flex;
+	background-color: rgba(243, 243, 243, 1);
+	padding: 6px 16px;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 10px;
+}
+
+.delivery__icon {
+	display: flex;
+	align-items: center;
+}
+
+.delivery__description {
+	color: #1b1b1b;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 19px;
+}
+
+a.cart-count:not(.cart-count--has-items) ~ div .delivery__container {
+	display: none !important;
+}
+
+.total-line__price .order-summary__small-text {
+	color: #323232;
+	text-align: right;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: -0.4px;
+}
+
+.order-summary__emphasis__new,
+.order-summary__type {
+	color: #323232;
+	text-align: right;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: -0.4px;
+}
+
+.delivery__details {
+	padding-top: 0.75em;
+}
+
+.content-box__emphasis {
+	display: block !important;
+	color: #1b1b1b;
+	text-align: right;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 19px;
+}
+
+.content-box__row {
+	padding-right: 0px !important;
+}
+
+.review-block:nth-child(3) .review-block__link {
+	display: flex;
+	justify-content: space-between;
+	max-width: 100% !important;
+}
+
+.order-delivery__type {
+	color: #1b1b1b;
+	text-align: right;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+@media (max-width: 767px) {
+	.total-line__price .order-summary__small-text {
+		color: #323232;
+		font-size: calc(12.57143px + 0.44643vw) !important;
+		font-weight: 400;
+		line-height: 17.807px;
+		letter-spacing: -0.4px;
+	}
+	.order-summary__emphasis__new {
+		font-size: calc(12.57143px + 0.44643vw) !important;
+	}
+	.content-box__emphasis {
+		font-size: 11.12px;
+	}
+	.order-summary__type {
+		font-size: calc(12.57143px + 0.44643vw) !important;
+	}
+	.order-delivery__type {
+		font-size: 11.12px;
+		font-weight: 400;
+		line-height: 16.246px;
+		color: #1b1b1b;
+	}
+	.delivery__container {
+		padding: 6px 10px;
+		font-size: 11px;
+		font-weight: 400;
+		line-height: 11px;
+		gap: 5px;
+	}
+
+	.delivery__icon {
+		display: block !important;
+		align-items: unset !important;
+	}
+	.delivery__description {
+		font-size: 11px;
+		line-height: 11px;
+	}
+}

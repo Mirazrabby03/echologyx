@@ -1,0 +1,371 @@
+// .l-checkout-main {
+// 	& > section {
+// 		header {
+// 			background-color: #fff !important;
+// 			color: rgba(0, 0, 0, 0.3) !important;
+// 			border-bottom: 1.5px solid rgba(0, 0, 0, 0.3);
+
+// 			&.m-active h2 {
+// 				display: none;
+// 			}
+
+// 			&:not(.m-active) .ab--pagination {
+// 				display: none;
+// 			}
+
+// 			.ab--pagination {
+// 				display: flex;
+// 				width: 100%;
+// 				justify-content: center;
+// 				align-items: center;
+// 				gap: 15px;
+
+// 				.item.info {
+// 					display: flex;
+// 					flex-direction: column;
+// 					align-items: center;
+// 					flex: 1;
+// 					gap: 10px;
+// 					max-width: 40px;
+
+// 					span.text {
+// 						height: 40px;
+// 						width: 40px;
+// 						border-radius: 50%;
+// 						border: 1px solid #888988;
+// 						display: flex;
+// 						align-items: center;
+// 						justify-content: center;
+// 					}
+// 				}
+
+// 				.sucess-icon {
+// 					display: none;
+// 				}
+
+// 				.item.bar {
+// 					width: 64px;
+// 					height: 2px;
+// 					background: #b3b3b3;
+// 					margin-bottom: 20px;
+
+// 					.inner {
+// 						height: 100%;
+// 						width: 100%;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		.number {
+// 			font-size: 17px;
+// 			font-weight: 700;
+// 		}
+
+// 		.title {
+// 			font-size: 12px;
+// 			font-weight: 700;
+// 			line-height: 13px;
+// 		}
+
+// 		&[data-ref='shippingStep'] {
+// 			.ab--pagination {
+// 				& .item:first-child {
+// 					span {
+// 						border-color: rgba(25, 154, 76, 1) !important;
+// 						color: rgba(25, 154, 76, 1);
+// 					}
+
+// 					h3 {
+// 						color: rgba(0, 0, 0, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(2) {
+// 					.inner {
+// 						background: rgba(25, 154, 76, 1);
+// 						width: 50%;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		&[data-ref='billingStep'] {
+// 			.ab--pagination {
+// 				& .item:first-child {
+// 					span {
+// 						background: rgba(25, 154, 76, 1);
+// 						color: white;
+
+// 						.sucess-icon {
+// 							display: block;
+// 						}
+
+// 						.number {
+// 							display: none;
+// 						}
+// 					}
+
+// 					h3 {
+// 						color: rgba(0, 0, 0, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(2) {
+// 					.inner {
+// 						background: rgba(25, 154, 76, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(3) {
+// 					span {
+// 						border-color: rgba(25, 154, 76, 1) !important;
+// 						color: rgba(25, 154, 76, 1);
+// 					}
+
+// 					h3 {
+// 						color: rgba(0, 0, 0, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(4) {
+// 					.inner {
+// 						background: rgba(25, 154, 76, 1);
+// 						width: 50%;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		&[data-ref='summaryStep'] {
+// 			.ab--pagination {
+// 				& .item:first-child {
+// 					span {
+// 						background: rgba(25, 154, 76, 1);
+// 						color: white;
+
+// 						.sucess-icon {
+// 							display: block;
+// 						}
+
+// 						.number {
+// 							display: none;
+// 						}
+// 					}
+
+// 					h3 {
+// 						color: rgba(0, 0, 0, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(2) {
+// 					.inner {
+// 						background: rgba(25, 154, 76, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(3) {
+// 					span {
+// 						background: rgba(25, 154, 76, 1);
+// 						color: white;
+
+// 						.sucess-icon {
+// 							display: block;
+// 						}
+
+// 						.number {
+// 							display: none;
+// 						}
+// 					}
+
+// 					h3 {
+// 						color: rgba(0, 0, 0, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(4) {
+// 					.inner {
+// 						background: rgba(25, 154, 76, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(5) {
+// 					span {
+// 						border-color: rgba(25, 154, 76, 1) !important;
+// 						color: rgba(25, 154, 76, 1);
+// 					}
+
+// 					h3 {
+// 						color: rgba(0, 0, 0, 1);
+// 					}
+// 				}
+
+// 				& .item:nth-child(6) {
+// 					.inner {
+// 						background: rgba(25, 154, 76, 1);
+// 						width: 50%;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// @media (max-width: 767px) {
+// 	.ab--pagination {
+// 		gap: 5px !important;
+// 	}
+// }
+
+.b-checkout_step-header {
+	padding: 14px 20px !important;
+}
+
+.l-checkout-main > section header.m-active {
+	background-color: #fff !important;
+	color: rgba(0, 0, 0, 0.3) !important;
+	border-bottom: 1px solid #bababa;
+}
+.l-checkout-main > section header.m-active h2 {
+	display: none;
+}
+.l-checkout-main > section header:not(.m-active) .ab--pagination {
+	display: none;
+}
+.l-checkout-main > section header .ab--pagination {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+.l-checkout-main > section header .ab--pagination .item.info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	gap: 10px;
+	max-width: 40px;
+}
+.l-checkout-main > section header .ab--pagination .item.info span.text {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.l-checkout-main > section header .ab--pagination .sucess-icon {
+	display: none;
+}
+.l-checkout-main > section header .ab--pagination .item.bar {
+	width: 64px;
+	height: 2px;
+	background: rgba(0, 0, 0, 0.3);
+	margin-bottom: 20px;
+}
+.l-checkout-main > section header .ab--pagination .item.bar .inner {
+	height: 100%;
+	width: 100%;
+}
+.l-checkout-main > section .number {
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.l-checkout-main > section .title {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 13px;
+}
+.l-checkout-main > section[data-ref='shippingStep'] .ab--pagination .item:first-child span {
+	border-color: rgba(25, 154, 76, 1) !important;
+	color: rgba(25, 154, 76, 1);
+}
+.l-checkout-main > section[data-ref='shippingStep'] .ab--pagination .item:first-child h3 {
+	color: rgba(0, 0, 0, 1);
+}
+.l-checkout-main > section[data-ref='shippingStep'] .ab--pagination .item:nth-child(2) .inner {
+	background: rgba(25, 154, 76, 1);
+	width: 50%;
+}
+.l-checkout-main > section[data-ref='billingStep'] .ab--pagination .item:first-child span {
+	background: rgba(25, 154, 76, 1);
+	color: white;
+	border: 2px solid rgba(25, 154, 76, 1) !important;
+}
+.l-checkout-main > section[data-ref='billingStep'] .ab--pagination .item:first-child span .sucess-icon {
+	display: block;
+}
+.l-checkout-main > section[data-ref='billingStep'] .ab--pagination .item:first-child span .number {
+	display: none;
+}
+.l-checkout-main > section[data-ref='billingStep'] .ab--pagination .item:first-child h3 {
+	color: rgba(0, 0, 0, 1);
+}
+.l-checkout-main > section[data-ref='billingStep'] .ab--pagination .item:nth-child(2) .inner {
+	background: rgba(25, 154, 76, 1);
+}
+.l-checkout-main > section[data-ref='billingStep'] .ab--pagination .item:nth-child(3) span {
+	border-color: rgba(25, 154, 76, 1) !important;
+	color: rgba(25, 154, 76, 1);
+	// border: 2px solid rgba(25, 154, 76, 1);
+}
+.l-checkout-main > section[data-ref='billingStep'] .ab--pagination .item:nth-child(3) h3 {
+	color: rgba(0, 0, 0, 1);
+}
+.l-checkout-main > section[data-ref='billingStep'] .ab--pagination .item:nth-child(4) .inner {
+	background: rgba(25, 154, 76, 1);
+	width: 50%;
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:first-child span {
+	background: rgba(25, 154, 76, 1);
+	color: white;
+	border: 2px solid rgba(25, 154, 76, 1) !important;
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:first-child span .sucess-icon {
+	display: block;
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:first-child span .number {
+	display: none;
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:first-child h3 {
+	color: rgba(0, 0, 0, 1);
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(2) .inner {
+	background: rgba(25, 154, 76, 1);
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(3) span {
+	background: rgba(25, 154, 76, 1);
+	color: white;
+	border: 2px solid rgba(25, 154, 76, 1) !important;
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(3) span .sucess-icon {
+	display: block;
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(3) span .number {
+	display: none;
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(3) h3 {
+	color: rgba(0, 0, 0, 1);
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(4) .inner {
+	background: rgba(25, 154, 76, 1);
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(5) span {
+	border-color: rgba(25, 154, 76, 1) !important;
+	color: rgba(25, 154, 76, 1);
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(5) h3 {
+	color: rgba(0, 0, 0, 1);
+}
+.l-checkout-main > section[data-ref='summaryStep'] .ab--pagination .item:nth-child(6) .inner {
+	background: rgba(25, 154, 76, 1);
+	width: 50%;
+}
+@media (max-width: 767px) {
+	.ab--pagination {
+		gap: 5px !important;
+	}
+}

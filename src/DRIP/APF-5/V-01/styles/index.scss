@@ -1,0 +1,36 @@
+.product-meta__subline {
+	margin-top: 4px;
+	width: 100%;
+	line-height: 22px;
+	font-size: 13px;
+	color: rgba(51, 51, 51, 1);
+	font-weight: 400;
+	margin-bottom: 13px;
+}
+
+.product-meta__uspText {
+	display: none;
+}
+
+@media (max-width: 999px) {
+	.product-meta__subline {
+		font-size: 14px;
+		margin-top: 6px;
+		font-weight: 300;
+		margin-bottom: 18px;
+	}
+	.product-meta {
+		padding-bottom: unset;
+	}
+	.product-meta__taxes-included {
+		margin-bottom: 10px !important;
+	}
+
+	.product-form__buy-buttons {
+		position: relative;
+		top: -20px;
+	}
+	.atc_upsell_product {
+		margin-top: 20px;
+	}
+}

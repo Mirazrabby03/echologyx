@@ -1,0 +1,33 @@
+.product-form__text {
+	padding-bottom: 22px !important;
+}
+
+.product-meta {
+	margin-bottom: 22px !important;
+}
+
+.metafield-rich_text_field {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.metafield-rich_text_field p {
+	margin: 0;
+}
+
+// .metafield-rich_text_field p strong {
+// 	font-weight: 700 !important;
+// }
+
+@media (max-width: 740px) {
+	.metafield-rich_text_field {
+		gap: 8px;
+	}
+	.product-form__text {
+		padding-bottom: 8px !important;
+	}
+	.product-meta {
+		margin-bottom: 8px !important;
+	}
+}

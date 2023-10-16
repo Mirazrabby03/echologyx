@@ -16,7 +16,7 @@ function waitForElem(waitFor, callback, minElements = 1, isVariable = false, tim
 
 
 function mainJs(body) {
-
+    console.clear()
     console.log(`Test Name - Variant Name`);
 
 }

@@ -16,152 +16,170 @@ function waitForElem(waitFor, callback, minElements = 1, isVariable = false, tim
 
 const products = [
     {
-        link: "https://apfelband.de/products/alpin-loop-armband",
+        link: "/products/alpin-loop-armband",
         subline: "Optimal für Wanderungen & alle Outdoor-Abenteuer",
     },
     {
-        link:"https://apfelband.de/products/bicolor-alpin-loop-armband",
-        subline:"Ideal für Wanderungen & jedes Abenteuer im Freien",
+        link:"/products/bicolor-alpin-loop-armband",
+        subline:"Ideal für Wanderungen & Abenteuer im Freien",
     },
     {
-        link:"https://apfelband.de/products/flex-loop-armband",
+        link:"/products/flex-loop-armband",
         subline:"Perfektes Tragegefühl für jede Gelegenheit",
     },
     {
-        link:"https://apfelband.de/products/florales-lederarmband",
+        link:"/products/florales-lederarmband",
         subline:"Für das gewisse Etwas in deinem Outfit",
     },
     {
-        link:"https://apfelband.de/products/schmales-lederarmband",
-        subline:"Schickes Accessoire als Highlight für deinen Look",
+        link:"/products/schmales-lederarmband",
+        subline:"Edles Accessoire als Highlight für deinen Look",
     },
     {
-        link:"https://apfelband.de/products/geflochtenes-flex-loop-bicolor",
+        link:"/products/geflochtenes-flex-loop-bicolor",
         subline:"Passt immer, egal ob Alltag oder andere Anlässe",
     },
     {
-        link:"https://apfelband.de/products/geflochtenes-flex-loop-multicolor",
+        link:"/products/geflochtenes-flex-loop-multicolor",
         subline:"Passend für jeden Style und Anlass",
     },
     {
-        link:"https://apfelband.de/products/geflochtenes-flex-loop-rainbow-edition",
+        link:"/products/geflochtenes-flex-loop-rainbow-edition",
         subline:"Persönlicher Stil im Regenbogen-Design",
     },
     {
-        link:"https://apfelband.de/products/geflochtenes-flex-loop",
+        link:"/products/geflochtenes-flex-loop",
         subline:"Bequemer Komfort, egal ob Freizeit oder Arbeit",
     },
     {
-        link:"https://apfelband.de/products/geflochtenes-solo-loop-edition",
+        link:"/products/geflochtenes-solo-loop-edition",
         subline:"Leichtes Tragegefühl für jeden Anlass",
     },
     {
-        link:"https://apfelband.de/products/keramik",
+        link:"/products/keramik",
         subline:"Das stilvolle Upgrade für deinen Look",
     },
     {
-        link:"https://apfelband.de/products/gliederarmband-holz",
+        link:"/products/gliederarmband-holz",
         subline:"Für den besonderen & eleganten Look",
     },
     {
-        link:"https://apfelband.de/products/hippie-lederarmband",
+        link:"/products/hippie-lederarmband",
         subline:"Der Eyecatcher für deinen einzigartigen Look",
     },
     {
-        link:"https://apfelband.de/products/echtlederarmband",
+        link:"/products/echtlederarmband",
         subline:"Klassisch & edel, für einen zeitlosen Look",
     },
     {
-        link:"https://apfelband.de/products/lederarmband",
+        link:"/products/lederarmband",
         subline:"Dein zeitloser Look für jeden Anlass",
     },
     {
-        link:"https://apfelband.de/products/lederarmband-lochmuster",
+        link:"/products/lederarmband-lochmuster",
         subline:"Für einen eleganten Look im Alltag",
     },
     {
-        link:"https://apfelband.de/products/leder-loop",
-        subline:"Elegantes Design & angenehmes Tragefühl im Alltag",
+        link:"/products/leder-loop",
+        subline:"Eleganter Look & angenehmes Tragefühl im Alltag",
     },
     {
-        link:"https://apfelband.de/products/gliederarmband-classic",
+        link:"/products/gliederarmband-classic",
         subline:"Für einen starken Eindruck bei jeder Gelegenheit",
     },
     {
-        link:"https://apfelband.de/products/pulseira",
+        link:"/products/pulseira",
         subline:"Stilvoll & edel, dein Statement für jeden Anlass",
     },
     {
-        link:"https://apfelband.de/products/gliederarmband-resin",
+        link:"/products/gliederarmband-resin",
         subline:"Edel & individuell, für deinen besonderen Look",
     },
     {
-        link:"https://apfelband.de/products/vena",
+        link:"/products/vena",
         subline:"Klassisch & modern, der Hingucker für jedes Outfit",
     },
     {
-        link:"https://apfelband.de/products/milanese-armband",
+        link:"/products/milanese-armband",
         subline:"Angenehm & edel, für jeden Anlass geeignet",
     },
     {
-        link:"https://apfelband.de/products/milanese-series7",
+        link:"/products/milanese-series7",
         subline:"Elegant & komfortabel, passend für jeden Style",
     },
     {
-        link:"https://apfelband.de/products/milanese",
+        link:"/products/milanese",
         subline:"Edler Look für alle Anlässe, ob Freizeit oder Arbeit",
     },
     {
-        link:"https://apfelband.de/products/ocean-armband",
+        link:"/products/ocean-armband",
         subline:"Wasserfest & stylisch, perfekt zum Tauchen",
     },
     {
-        link:"https://apfelband.de/products/rainbow-sport-silikonarmband",
-        subline:"Dein sportlicher und moderner Begleiter im Alltag",
+        link:"/products/rainbow-sport-silikonarmband",
+        subline:"Sportlicher und moderner Begleiter im Alltag",
     },
     {
-        link:"https://apfelband.de/products/silikonarmband",
+        link:"/products/silikonarmband",
         subline:"Ideal für alle Anlässe, ob Sport, Alltag oder Arbeit",
     },
     {
-        link:"https://apfelband.de/products/sport-loop-bicolor",
+        link:"/products/sport-loop-bicolor",
         subline:"Perfekter Komfort für Freizeit und Sport",
     },
     {
-        link:"https://apfelband.de/products/multicolor-sport-loop",
+        link:"/products/multicolor-sport-loop",
         subline:"Atmungsaktiv & leicht, ideal für Sport & Freizeit",
     },
     {
-        link:"https://apfelband.de/products/sport-loop",
+        link:"/products/sport-loop",
         subline:"Sportlich & stilvoll, für aktive Tage und Freizeit",
     },
     {
-        link:"https://apfelband.de/products/sport-silikonarmband",
+        link:"/products/sport-silikonarmband",
         subline:"Leicht & atmungsaktiv, perfekt für Sport & Freizeit",
     },
     {
-        link:"https://apfelband.de/products/trail-loop-armband",
+        link:"/products/trail-loop-armband",
         subline:"Robust & flexibel, für Abenteuer und Alltag",
     },
     {
-        link:"https://apfelband.de/products/vintage-lederarmband",
+        link:"/products/vintage-lederarmband",
         subline:"Zeitloses & stilvolles Accessoire für jeden Anlass",
     },
     {
-        link:"https://apfelband.de/products/wendearmband-verto",
-        subline:"Ein Armband, vier Looks - passend für jeden Anlass",
+        link:"/products/wendearmband-verto",
+        subline:"Ein Armband, vier Looks - ideal für jeden Anlass",
     },
 ];
 
 function mainJs(body) {
 
     const productTitle = document.querySelector('.product-meta .product-meta__title');
-    
-
-
-
-    console.log(`Test Name - Variant Name`);
-
+    productTitle.insertAdjacentHTML('afterend', `<div class="product-meta__subline">
+    <span class="product-meta__subline--text"></span>
+    </div>`);
+    const currentUrl = window.location.pathname;
+    products.forEach(product => {
+        if(currentUrl === product.link) {
+            document.querySelector('.product-meta__subline--text').innerHTML = product.subline;
+        }
+    });
+    // console.log(`APF-5.............. V-01`);
 }
 
-waitForElem("body", mainJs);
+waitForElem(".product-meta .product-meta__title", mainJs);
+
+
+
+
+
+
+
+
+
+
+
+
+
+

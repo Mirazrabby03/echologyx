@@ -1,0 +1,129 @@
+.static__checkout__container {
+	margin-top: 30px;
+}
+
+.static__checkout__title {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	text-align: center;
+	color: rgba(51, 51, 51, 1);
+	padding: 0 1em;
+}
+
+.static__checkout__header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+.static__checkout__header::before {
+	content: '';
+	display: inline-block;
+	height: 1px;
+	background-color: #e6e6e6;
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.static__checkout__header::after {
+	content: '';
+	display: inline-block;
+	height: 1px;
+	background-color: #e6e6e6;
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.static__checkout__body {
+	background: rgba(204, 204, 204, 0.2);
+	padding: 12px 31px 16px 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	position: relative;
+}
+
+.main__header {
+	padding-bottom: 30px !important;
+}
+
+.arrow-down {
+	position: absolute;
+	bottom: -24px;
+	left: 15px;
+}
+
+.static__checkout__payment-methods {
+	display: flex;
+	gap: 26px;
+	flex-wrap: wrap;
+	row-gap: inherit;
+	justify-content: center;
+}
+
+.static__checkout__img {
+	object-fit: contain;
+}
+
+.static__checkout__subtitle {
+	color: #333;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+@media (max-width: 767px) {
+	.static__checkout__body {
+		width: 100vw;
+		margin-left: -14px;
+		box-sizing: border-box;
+		padding: 12px 14px 16px 14px;
+	}
+	.static__checkout__payment-methods {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		gap: 15px;
+		justify-content: center;
+		row-gap: 12px;
+	}
+	.arrow-down {
+		bottom: -20px;
+		left: 19px;
+	}
+	.arrow-down svg {
+		width: 12px;
+		height: 24px;
+	}
+	.static__checkout__container {
+		margin-top: unset;
+	}
+	.alternative-payment-separator {
+		padding-bottom: 30px;
+	}
+}
+
+@media (min-width: 570px) and (max-width: 767px) {
+	.static__checkout__body {
+		margin-left: calc(((100vw - 532px) / 2) * -1);
+	}
+	.arrow-down {
+		left: calc((100vw - 532px) / 2);
+	}
+}
